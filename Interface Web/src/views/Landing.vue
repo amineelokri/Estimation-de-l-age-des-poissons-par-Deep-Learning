@@ -70,20 +70,8 @@ export default {
             const formattedSize = parseFloat((bytes / Math.pow(k, i)).toFixed(dm));
 
             return `${formattedSize} ${sizes[i]}`;
-        },
-        searchCountry(event) {
-            setTimeout(() => {
-                if (!event.query.trim().length) {
-                    this.autoFilteredValue = [...this.autoValue];
-                } else {
-                    this.autoFilteredValue = this.autoValue.filter((country) => {
-                        return country.name.toLowerCase().startsWith(event.query.toLowerCase());
-                    });
-                }
-            }, 250);
         }
     },
-
 
 };
 </script>
@@ -172,27 +160,7 @@ export default {
                 </div>
             </div>
             <div class="card pt-4 px-4 lg:px-8  overflow-hidden ">
-                <Dialog v-model:visible="visible" modal header="Complétez les Informations" :style="{ width: '30rem' }">
-                    <div class="flex flex-column align-items-center  w-full gap-1 border-bottom-1 surface-border">
-                        <h5>Lieu</h5>
-                        <AutoComplete placeholder="Search" id="dd" :dropdown="true" v-model="selectedAutoValue"
-                            :suggestions="autoFilteredValue" @complete="searchCountry($event)" field="name" />
-                        <h5>Zone</h5>
-                        <AutoComplete placeholder="Search" id="dd" :dropdown="true" v-model="selectedAutoValue"
-                            :suggestions="autoFilteredValue" @complete="searchCountry($event)" field="name" />
-                        <h5>Date de collection</h5>
-                        <Calendar :showIcon="true" :showButtonBar="true" v-model="calendarValue"></Calendar>
-                        <h5>Sexe</h5>
-                        <SelectButton v-model="selectButtonValue1" :options="selectButtonValues1" optionLabel="name" />
-                    </div>
-                    <div class="flex justify-content-end mt-4 gap-2">
-
-                        <Button type="button" label="Cancel" severity="secondary" @click="visible = false"></Button>
-                        <router-link to="/estimation">
-                            <Button type="button" label="Estimer" @click="visible = false"></Button>
-                        </router-link>
-                    </div>
-                </Dialog>
+                
                 <div class="col-12 mt-8 mb-8 p-2 md:p-8"
                     style="border-radius: 20px; background: linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), radial-gradient(77.36% 256.97% at 77.36% 57.52%, #014B72 0%, #c3dcfa 100%)">
                     <div class="flex flex-column justify-content-center align-items-center text-center px-3 py-3 md:py-0">
@@ -217,8 +185,10 @@ export default {
                                 <Button @click="chooseCallback()" icon="pi pi-images" rounded outlined></Button>
                             </span>
                             <span class="flex gap-2 ">
+                                <router-link to="/estimation">
                                 <Button @click="visible = true" icon="pi pi-cloud-upload" label="Estimer" rounded outlined
                                     severity="success" :disabled="!files || files.length === 0"></Button>
+                                </router-link>
                                 <Button @click="clearCallback()" icon="pi pi-times" rounded outlined severity="danger"
                                     :disabled="!files || files.length === 0"></Button>
                             </span>
