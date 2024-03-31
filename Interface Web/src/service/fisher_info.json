@@ -1,0 +1,21 @@
+{
+    "info":{
+    "moyenne_age_total": 3.56,
+    "moyenne_age_sexe": {
+        "F": 3.78,
+        "I": 0.78,
+        "M": 3.25
+    },
+    "nombres_par_sexe": {
+        "F": 9207,
+        "M": 4635,
+        "I": 234
+    },
+    "pourcentage_intervalle_age": {
+        "eau_douce": 11824,
+        "ocean": 1549,
+        "retour_en_eau_douce": 449
+    },
+    "nombre_lignes": 14076
+}
+}
