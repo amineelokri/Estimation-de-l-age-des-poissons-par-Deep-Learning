@@ -4,7 +4,7 @@ Estimation de l'âge des poissons par Deep Learning.
 ## Structure du Répertoire ##
 
 ### document/ :
-Ce dossier contient les comptes rendus et les rapports pour le projet.
+Ce dossier contient les comptes rendus , les rapports et documentation pour le projet.
 
 ### interface web/ : 
 Ce dossier contient l'interface web développée pour le projet.
