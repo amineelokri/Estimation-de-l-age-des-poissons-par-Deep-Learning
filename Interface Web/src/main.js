@@ -55,6 +55,8 @@ import Toolbar from 'primevue/toolbar';
 import Timeline from 'primevue/timeline';
 import ToggleButton from 'primevue/togglebutton';
 import Tooltip from 'primevue/tooltip';
+import Accordion from 'primevue/accordion';
+import AccordionTab from 'primevue/accordiontab';
 
 
 
@@ -119,5 +121,7 @@ app.component('Timeline', Timeline);
 app.component('Toast', Toast);
 app.component('Toolbar', Toolbar);
 app.component('ToggleButton', ToggleButton);
+app.component('Accordion', Accordion);
+app.component('AccordionTab', AccordionTab);
 
 app.mount('#app');

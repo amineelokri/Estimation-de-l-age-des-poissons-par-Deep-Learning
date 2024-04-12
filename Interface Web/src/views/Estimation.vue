@@ -13,8 +13,8 @@ export default {
     <div class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
         <section>
             <span class="block text-6xl font-bold mb-4">Estimation d'Age est: </span>
-            <div class="text-6xl text-blue-800 font-bold ">567</div>
-            <p class="mt-0 mb-4 text-700 line-height-3">jours</p>
+            <div class="text-6xl text-blue-800 font-bold ">5</div>
+            <p class="mt-0 mb-4 text-700 line-height-3">ans</p>
             <div class="mt-4">
                 <Rating v-model="value" />
             </div>
