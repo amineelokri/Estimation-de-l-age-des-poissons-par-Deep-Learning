@@ -9,9 +9,8 @@ export default {
             totalSize: 0,
             totalSizePercent: 0,
             events: [
-                { status: "Sélectionnez une image d`otlithe", text: "L'image doit être une image claire.\nPrivilégiez des images avec une résolution élevée.\nLes images doivent être au format JPEG ou PNG.", icon: 'pi pi-image', color: '#9C27B0', image: 'otolith-img.jpg' },
-                { status: 'Modèle de Traitement', text: "Notre modèle d'estimation d'âge analysera l'image en utilisant des techniques avancées d'apprentissage automatique.", icon: 'pi pi-bolt', color: '#673AB7' },
-                { status: 'Complétez les Informations', text: "Remplissez les champs requis pour fournir des informations contextuelles sur l'image.", icon: 'pi pi-list', color: '#FF9800' },
+                { status: "Sélectionnez une image d'otolithe", text: "L'image doit être une image claire.\nPrivilégiez des images avec une résolution élevée.\nLes images doivent être au format PNG.", icon: 'pi pi-image', color: '#9C27B0', image: 'otolith-img.jpg' },
+                { status: 'Modèle de Traitement', text: "Notre modèle d'estimation d'âge analysera l'otolithe en utilisant des techniques avancées d'apprentissage automatique.", icon: 'pi pi-bolt', color: '#673AB7' },
                 { status: "Résultats de l'Estimation", text: "Découvrez l'estimation d'âge du salmon basée sur l'analyse de l'image et des informations fournies.", icon: 'pi pi-check', color: '#607D8B' }
             ],
             toggleValue: false,
@@ -99,23 +98,30 @@ export default {
                             </a>
                         </li>
                         <li>
-                            <a @click="smoothScroll('#demo')"
-                                class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3 p-ripple" v-ripple>
-                                <span>Démo</span>
-                            </a>
+                            <router-link to="/demo">
+
+                                <a class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3 p-ripple"
+                                    v-ripple>
+                                    <span>Démo</span>
+                                </a>
+                            </router-link>
+
                         </li>
                         <li>
                             <router-link to="/statistiques">
-                                <a class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3 p-ripple" v-ripple>
+                                <a class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3 p-ripple"
+                                    v-ripple>
                                     <span>Statistiques</span>
                                 </a>
                             </router-link>
                         </li>
                         <li>
-                            <a @click="smoothScroll('#about')"
-                                class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3 p-ripple" v-ripple>
-                                <span>Notre Projet</span>
-                            </a>
+                            <router-link to="/demo">
+                                <a class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3 p-ripple"
+                                    v-ripple>
+                                    <span>Notre Projet</span>
+                                </a>
+                            </router-link>
                         </li>
 
                         <li>
@@ -140,17 +146,19 @@ export default {
             <div id="hero" class="grid  pt-4 px-4 lg:px-8 overflow-hidden"
                 style=" height:100vh ;background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), radial-gradient(77.36% 256.97% at 77.36% 57.52%, rgb(255, 255, 255) 0%, rgb(195, 227, 250) 100%); clip-path: ellipse(150% 87% at 93% 13%)">
                 <div class="col-6">
-                    <h1 class="text-6xl font-bold text-gray-900 line-height-2"><span class="font-light block">AGM</span>Age
+                    <h1 class="text-6xl font-bold text-gray-900 line-height-2"><span
+                            class="font-light block">AGM</span>Age
                         Generator Machine</h1>
-                    <p class="font-normal text-2xl line-height-3 md:mt-3 text-gray-700">Découvrez l'âge des salmons comme
+                    <p class="font-normal text-2xl line-height-3 md:mt-3 text-gray-700">Découvrez l'âge des salmons
+                        comme
                         jamais auparavant</p>
                     <div class="mt-8">
                         <Button label="Estimer"
-                            class="p-button-rounded border-none ml-5 font-light text-white line-height-2 bg-blue-800"
+                            class="p-button-rounded border-none m-3 font-light text-white line-height-2 bg-blue-800"
                             @click="smoothScroll('#estimer')"></Button>
                         <router-link to="/statistiques">
                             <Button icon="pi pi-chart-bar" label="Statistiques"
-                                class="p-button-rounded border-none ml-5 font-light text-white line-height-2 bg-blue-500">
+                                class="p-button-rounded border-none m-3 font-light text-white line-height-2 bg-blue-500">
                             </Button>
                         </router-link>
                     </div>
@@ -160,13 +168,16 @@ export default {
                 </div>
             </div>
             <div class="card pt-4 px-4 lg:px-8  overflow-hidden ">
-                
+
                 <div class="col-12 mt-8 mb-8 p-2 md:p-8"
                     style="border-radius: 20px; background: linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), radial-gradient(77.36% 256.97% at 77.36% 57.52%, #014B72 0%, #c3dcfa 100%)">
-                    <div class="flex flex-column justify-content-center align-items-center text-center px-3 py-3 md:py-0">
+                    <div
+                        class="flex flex-column justify-content-center align-items-center text-center px-3 py-3 md:py-0">
                         <h3 class="text-gray-900 mb-2">Notre objectif</h3>
-                        <p class="text-gray-900 sm:line-height-2 md:line-height-4 text-2xl mt-4" style="max-width: 800px">
-                            Mettre en œuvre des techniques avancées d'apprentissage automatique pour estimer l'âge à partir
+                        <p class="text-gray-900 sm:line-height-2 md:line-height-4 text-2xl mt-4"
+                            style="max-width: 800px">
+                            Mettre en œuvre des techniques avancées d'apprentissage automatique pour estimer l'âge à
+                            partir
                             d'images
                         </p>
                         <img src="/demo/images/logo/logo-black.png" height="70" class="mt-4" alt="Company logo" />
@@ -186,8 +197,8 @@ export default {
                             </span>
                             <span class="flex gap-2 ">
                                 <router-link to="/estimation">
-                                <Button @click="visible = true" icon="pi pi-cloud-upload" label="Estimer" rounded outlined
-                                    severity="success" :disabled="!files || files.length === 0"></Button>
+                                    <Button @click="visible = true" icon="pi pi-cloud-upload" label="Estimer" rounded
+                                        outlined severity="success" :disabled="!files || files.length === 0"></Button>
                                 </router-link>
                                 <Button @click="clearCallback()" icon="pi pi-times" rounded outlined severity="danger"
                                     :disabled="!files || files.length === 0"></Button>
@@ -208,8 +219,8 @@ export default {
                                     <div>{{ formatSize(file.size) }}</div>
                                     <Badge value="Pending" severity="warning" />
                                     <Button icon="pi pi-times"
-                                        @click="onRemoveTemplatingFile(file, removeFileCallback, index)" outlined rounded
-                                        severity="danger" />
+                                        @click="onRemoveTemplatingFile(file, removeFileCallback, index)" outlined
+                                        rounded severity="danger" />
                                 </div>
                             </div>
                         </div>
@@ -226,8 +237,8 @@ export default {
                                     <span class="font-semibold">{{ file.name }}</span>
                                     <div>{{ formatSize(file.size) }}</div>
                                     <Badge value="Completed" class="mt-3" severity="success" />
-                                    <Button icon="pi pi-times" @click="removeUploadedFileCallback(index)" outlined rounded
-                                        severity="danger" />
+                                    <Button icon="pi pi-times" @click="removeUploadedFileCallback(index)" outlined
+                                        rounded severity="danger" />
                                 </div>
                             </div>
                         </div>
@@ -286,7 +297,8 @@ export default {
                         <h2 class="line-height-1 text-900 text-4xl font-normal">Nous sommes</h2>
                         <span class="text-700 text-2xl line-height-3 ml-0 md:ml-2" style="max-width: 650px">une équipe
                             d'étudiants en deuxième année du cycle ingénieur à l'Ecole d'Ingénieurs du littoral Côte
-                            d'Opale.<br>Ce projet ambitieux sous la direction éclairée de notre enseignante, Madame Emilie
+                            d'Opale.<br>Ce projet ambitieux sous la direction éclairée de notre enseignante, Madame
+                            Emilie
                             Poisson Caillault.</span>
                     </div>
                 </div>
@@ -298,11 +310,18 @@ export default {
                             <i class="pi pi-fw pi-sun text-5xl text-blue-200"></i>
                         </div>
                         <h2 class="line-height-1 text-900 text-4xl font-normal">Notre Projet</h2>
-                        <span class="text-700 text-2xl line-height-3 mr-0 md:mr-2" style="max-width: 650px">Notre objectif
-                            est de mettre en œuvre des techniques avancées d'apprentissage automatique pour estimer l'âge à
+                        <span class="text-700 text-2xl line-height-3 mr-0 md:mr-2" style="max-width: 650px">Notre
+                            objectif
+                            est de mettre en œuvre des techniques avancées d'apprentissage automatique pour estimer
+                            l'âge à
                             partir d'images. Ce projet allie la théorie à la pratique, nous permettant d'appliquer les
                             connaissances acquises au cours de notre cursus académique à une application concrète et
                             innovante.</span>
+                        <router-link to="/demo">
+                            <Button label="demo"
+                                class="p-button-rounded border-none ml-0 m-3 font-light text-white line-height-2 bg-blue-800">
+                            </Button>
+                        </router-link>
                     </div>
 
                     <div class="flex justify-content-end flex-order-1 sm:flex-order-2 col-12 lg:col-6 p-0"
@@ -358,7 +377,8 @@ export default {
                                 <a @click="smoothScroll('#hero')"
                                     class="line-height-3 text-xl block cursor-pointer mb-2 text-700">Privacy Policy</a>
                                 <a @click="smoothScroll('#hero')"
-                                    class="line-height-3 text-xl block cursor-pointer text-700">Terms of Service</a>
+                                    class="line-height-3 text-xl block cursor-pointer text-700">Terms
+                                    of Service</a>
                             </div>
                         </div>
                     </div>

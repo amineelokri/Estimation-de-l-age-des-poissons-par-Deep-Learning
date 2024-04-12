@@ -31,7 +31,7 @@ export default {
                     </router-link>
                 </li>
                 <li>
-                    <router-link to="/">
+                    <router-link to="/demo">
                         <a class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3 p-ripple" v-ripple>
                             <span>Démo</span>
                         </a>

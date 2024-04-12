@@ -133,13 +133,13 @@ watch(
         </div>
         <div class="col-12 xl:col-6">
             <div class="card flex flex-column align-items-center">
-                <h5 class="text-left w-full">L'intervalle d'âge</h5>
+                <h5 class="text-left w-full">Sexe</h5>
                 <Chart type="pie" :data="pieData" :options="pieOptions"></Chart>
             </div>
         </div>
         <div class="col-12 xl:col-6">
             <div class="card flex flex-column align-items-center">
-                <h5 class="text-left w-full">Sexe</h5>
+                <h5 class="text-left w-full">L'intervalle d'âge</h5>
                 <Chart type="doughnut" :data="pieData2" :options="pieOptions"></Chart>
             </div>
         </div>
